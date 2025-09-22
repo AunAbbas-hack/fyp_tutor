@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "112018332653",
+    "project_id": "fyptutor-0468",
+    "storage_bucket": "fyptutor-0468.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112018332653:android:3382a05dbd5fb81f79e5e4",
+        "android_client_info": {
+          "package_name": "com.example.fyp_tutor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb4UBkJzHpuxTZeGG3BqaciSR9ytxipek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
