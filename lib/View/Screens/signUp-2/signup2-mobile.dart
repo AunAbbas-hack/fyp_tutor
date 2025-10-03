@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fyp_tutor/Screens/sign-up1/signUp-steps.dart';
 import 'package:fyp_tutor/uiHelper/color_pallete.dart';
 import 'package:fyp_tutor/uiHelper/customs.dart';
 import 'package:fyp_tutor/uiHelper/mainButton.dart';
+
+import '../sign-up1/signUp-steps.dart';
 
 class Signup2Mobile extends StatelessWidget {
   const Signup2Mobile({super.key});

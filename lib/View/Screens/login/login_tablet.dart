@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:fyp_tutor/Screens/sign-up1/signUp_screen.dart';
+import 'package:fyp_tutor/uiHelper/color_pallete.dart';
 import 'package:fyp_tutor/uiHelper/mainButton.dart';
 
-import '../../uiHelper/color_pallete.dart';
-import '../../uiHelper/customs.dart';
+import '../../../uiHelper/customs.dart';
+import '../sign-up1/signUp_screen.dart';
 
-class LoginScreenMobile extends StatefulWidget {
-  LoginScreenMobile({super.key});
+class LoginScreenTablet extends StatefulWidget {
+   LoginScreenTablet({super.key});
 
   @override
-  State<LoginScreenMobile> createState() => _LoginScreenMobileState();
+  State<LoginScreenTablet> createState() => _LoginScreenTabletState();
 }
 
-class _LoginScreenMobileState extends State<LoginScreenMobile> {
-  final TextEditingController passwordController = TextEditingController();
+class _LoginScreenTabletState extends State<LoginScreenTablet> {
+   final TextEditingController passwordController=TextEditingController();
 
-  final TextEditingController mailController = TextEditingController();
-  @override
+   final TextEditingController mailController= TextEditingController();
+   @override
   void dispose() {
     // TODO: implement dispose
     super.dispose();
@@ -58,8 +58,8 @@ class _LoginScreenMobileState extends State<LoginScreenMobile> {
                   SizedBox(height: 10),
                   Custom.customTextField(
 
-                      HintText: "Enter Email",
-                      PreFixIcon: Icon(Icons.person, color: Colors.black),
+                    HintText: "Enter Email",
+                    PreFixIcon: Icon(Icons.person, color: Colors.black),
                       Controller: mailController
                   ),
                   SizedBox(height: 20),
@@ -74,8 +74,8 @@ class _LoginScreenMobileState extends State<LoginScreenMobile> {
                   ),
                   SizedBox(height: 10),
                   Custom.customTextField(
-                      HintText: "Enter Password",
-                      PreFixIcon: Icon(Icons.person, color: Colors.black),
+                    HintText: "Enter Password",
+                    PreFixIcon: Icon(Icons.person, color: Colors.black),
                       Controller: passwordController
                   ),
                   SizedBox(height: 20),
@@ -116,9 +116,7 @@ class _LoginScreenMobileState extends State<LoginScreenMobile> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Custom.customText(text: "Don't have an Account ?", FontSize: 10, color: Colors.black, FontWeight: FontWeight.normal),
-                        TextButton(onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>SignupScreen()));
-                        }, child: Custom.customText(text: "Sign Up", FontSize: 10, color: AppColor.Primary1, FontWeight: FontWeight.bold))
+                        TextButton(onPressed: (){  Navigator.push(context, MaterialPageRoute(builder: (context)=>SignupScreen()));}, child: Custom.customText(text: "Sign Up", FontSize: 10, color: AppColor.Primary1, FontWeight: FontWeight.bold))
                       ],
                     ),
                   ),

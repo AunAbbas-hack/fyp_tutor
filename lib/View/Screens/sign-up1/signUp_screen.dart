@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:fyp_tutor/Screens/sign-up1/signUp_desktop.dart';
-import 'package:fyp_tutor/Screens/sign-up1/signUp_mobile.dart';
-import 'package:fyp_tutor/Screens/sign-up1/signUp_tablet.dart';
+import 'package:fyp_tutor/View/Screens/sign-up1/signUp_desktop.dart';
+
+import 'package:fyp_tutor/View/Screens/sign-up1/signUp_mobile.dart';
+import 'package:fyp_tutor/View/Screens/sign-up1/signUp_tablet.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});

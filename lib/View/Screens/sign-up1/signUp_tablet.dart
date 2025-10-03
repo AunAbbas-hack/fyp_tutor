@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:fyp_tutor/Screens/sign-up1/signUp-steps.dart';
+import 'package:fyp_tutor/View/Screens/sign-up1/signUp-steps.dart';
 
-import '../../uiHelper/color_pallete.dart';
-import '../../uiHelper/customs.dart';
-import '../../uiHelper/mainButton.dart';
+import '../../../uiHelper/customs.dart';
+
+import '../../../uiHelper/mainButton.dart';
+
 
 class SignupTablet extends StatefulWidget {
   const SignupTablet({super.key});
@@ -59,7 +60,7 @@ class _SignupTabletState extends State<SignupTablet> {
             ),
             SizedBox(height: 10),
             Custom.customText(
-              text: "Passwprd",
+              text: "Password",
               FontSize: 10,
               color: Colors.black,
               FontWeight: FontWeight.bold,
