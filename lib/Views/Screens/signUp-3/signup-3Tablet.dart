@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Signup2Tablet extends StatelessWidget {
-  const Signup2Tablet({super.key});
+class Signup3Tablet extends StatelessWidget {
+  const Signup3Tablet({super.key});
 
   @override
   Widget build(BuildContext context) {
