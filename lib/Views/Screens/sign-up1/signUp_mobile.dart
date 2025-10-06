@@ -5,7 +5,6 @@ import '../../uiHelper/customs.dart';
 import '../../uiHelper/mainButton.dart';
 import '../../uiHelper/validators.dart';
 import '../signUp-2/signup-2.dart';
--
 
 class SignupMobile extends StatefulWidget {
   SignupMobile({super.key});

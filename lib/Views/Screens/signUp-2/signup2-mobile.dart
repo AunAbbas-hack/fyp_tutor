@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fyp_tutor/Views/Screens/signUp-3/signup-3mobile.dart';
 
 import '../../uiHelper/customs.dart';
 import '../../uiHelper/mainButton.dart';
@@ -53,7 +54,9 @@ class Signup2Mobile extends StatelessWidget {
             SizedBox(height: 20),
             RoundButton(
               title: "S I G N U P",
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Signup3Mobile()));
+              },
               color: Colors.white,
               fontWeight: FontWeight.bold,
             ),
