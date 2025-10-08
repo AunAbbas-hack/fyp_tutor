@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fyp_tutor/Views/Screens/signUp-2/signup2-desktop.dart';
-import 'package:fyp_tutor/Views/Screens/signUp-2/signup2-mobile.dart';
-import 'package:fyp_tutor/Views/Screens/signUp-2/signup2-tablet.dart';
+import 'package:fyp_tutor/Views/Screens/SIGNUP_SCREEN/signUp-2/signup2-desktop.dart';
+import 'package:fyp_tutor/Views/Screens/SIGNUP_SCREEN/signUp-2/signup2-mobile.dart';
+import 'package:fyp_tutor/Views/Screens/SIGNUP_SCREEN/signUp-2/signup2-tablet.dart';
 
 class Signup2 extends StatelessWidget {
   const Signup2({super.key});

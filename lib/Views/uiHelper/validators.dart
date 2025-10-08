@@ -9,11 +9,18 @@ class Validator{
       return 'Invalid email format';
     }
   }
-  static String? namelValidator(String? val) {
+  static String? firstNameValidator(String? val) {
     if (val == null || val.isEmpty) {
       return 'Name is required';
     }
   }
+  static String? lastNameValdator(String? val) {
+    if(val==null||val.isEmpty){
+      return 'Last Name is required';
+
+    }
+  }
+
   static String? passwordlValidator(String? val) {
     if (val == null || val.isEmpty) {
       return 'Password is required';

@@ -4,7 +4,7 @@ import '../../uiHelper/color_pallete.dart';
 import '../../uiHelper/customs.dart';
 import '../../uiHelper/mainButton.dart';
 import '../../uiHelper/validators.dart';
-import '../sign-up1/signUp_screen.dart';
+import '../SIGNUP_SCREEN/sign-up1/signUp_screen.dart';
 
 class LoginScreenTablet extends StatefulWidget {
    LoginScreenTablet({super.key});

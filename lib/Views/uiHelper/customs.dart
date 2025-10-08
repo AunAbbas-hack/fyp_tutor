@@ -23,10 +23,12 @@ class Custom {
     required Icon PreFixIcon,
     required TextEditingController Controller,
    required FormFieldValidator<String>? Validator,
+    FormFieldSetter<String>? onSaved,
 }){
     return TextFormField(
       controller: Controller,
       validator: Validator,
+      onSaved: (onSaved),
       decoration: InputDecoration(
         hintText: HintText,
         prefixIcon: PreFixIcon,
