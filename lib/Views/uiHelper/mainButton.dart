@@ -8,7 +8,7 @@ class RoundButton extends StatelessWidget {
   final Color color;
   final FontWeight fontWeight;
 
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {

@@ -14,13 +14,12 @@ class SignupMobile extends StatefulWidget {
 }
 
 class _SignupMobileState extends State<SignupMobile> {
-  final viewModel=SignUpViewModel();
-  final List<String> role=[];
-  final TextEditingController firstNameController=TextEditingController();
+  final viewModel = SignUpViewModel();
+  final List<String> role = [];
+  final TextEditingController firstNameController = TextEditingController();
   final TextEditingController lastNameController = TextEditingController();
-   final TextEditingController passwordController = TextEditingController();
-   final TextEditingController phoneController = TextEditingController();
-
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
   final TextEditingController mailController = TextEditingController();
   final GlobalKey<FormState> _key = GlobalKey<FormState>();
   @override
@@ -29,6 +28,10 @@ class _SignupMobileState extends State<SignupMobile> {
     super.dispose();
     passwordController.dispose();
     mailController.dispose();
+    firstNameController.dispose();
+    lastNameController.dispose();
+    phoneController.dispose();
+
   }
 
   @override
@@ -43,131 +46,136 @@ class _SignupMobileState extends State<SignupMobile> {
         ),
         leading: Icon(Icons.arrow_back, color: Colors.black),
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 10, right: 10),
-          child: Form(
-            key: _key,
-            child: Column(
-              children: [
-                SignUpSteps(currentStep: 1),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.only(left: 10, right: 10),
+            child: Form(
+              key: _key,
+              child: Column(
+                children: [
+                  SignUpSteps(currentStep: 1),
         
-                SizedBox(height: 20),
+                  SizedBox(height: 20),
         
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Custom.customText(
-                    text: "First Name",
-                    FontSize: 10,
-                    color: Colors.black,
-                    FontWeight: FontWeight.bold,
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Custom.customText(
+                      text: "First Name",
+                      FontSize: 10,
+                      color: Colors.black,
+                      FontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-                Custom.customTextField(
-                  HintText: "Enter First Name",
-                  PreFixIcon: Icon(Icons.person, color: Colors.black),
-                  Controller: firstNameController,
-                  Validator:Validator.firstNameValidator,
-                ),
-        
-                SizedBox(height: 10),Align(
-                  alignment: Alignment.topLeft,
-                  child: Custom.customText(
-                    text: "Last Name",
-                    FontSize: 10,
-                    color: Colors.black,
-                    FontWeight: FontWeight.bold,
+                  Custom.customTextField(
+                    HintText: "Enter First Name",
+                    PreFixIcon: Icon(Icons.person, color: Colors.black),
+                    Controller: firstNameController,
+                    Validator: Validator.firstNameValidator,
                   ),
-                ),
-                Custom.customTextField(
-                  HintText: "Enter Last Name",
-                  PreFixIcon: Icon(Icons.person, color: Colors.black),
-                  Controller: lastNameController,
-                  Validator:Validator.lastNameValdator,
-                ),
         
-                SizedBox(height: 10),
-        
-        
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Custom.customText(
-                    text: "Email",
-                    FontSize: 10,
-                    color: Colors.black,
-                    FontWeight: FontWeight.bold,
+                  SizedBox(height: 10),
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Custom.customText(
+                      text: "Last Name",
+                      FontSize: 10,
+                      color: Colors.black,
+                      FontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-                Custom.customTextField(
-                  HintText: "Enter Email",
-                  PreFixIcon: Icon(Icons.person, color: Colors.black),
-                  Controller: mailController,
-                  Validator:Validator.emailValidator,
-                ),
-        
-                SizedBox(height: 10),
-        
-        
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Custom.customText(
-                    text: "Password",
-                    FontSize: 10,
-                    color: Colors.black,
-                    FontWeight: FontWeight.bold,
+                  Custom.customTextField(
+                    HintText: "Enter Last Name",
+                    PreFixIcon: Icon(Icons.person, color: Colors.black),
+                    Controller: lastNameController,
+                    Validator: Validator.lastNameValdator,
                   ),
-                ),
-                Custom.customTextField(
-                  HintText: "Enter Password",
-                  PreFixIcon: Icon(Icons.person, color: Colors.black),
-                  Controller: passwordController,
-                  Validator: Validator.passwordlValidator,
-                ),
-                SizedBox(height: 10),
         
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Custom.customText(
-                    text: "Password",
-                    FontSize: 10,
-                    color: Colors.black,
-                    FontWeight: FontWeight.bold,
-                  ),
-                ),
-                Custom.customTextField(
-                  HintText: "Confirm Password",
-                  PreFixIcon: Icon(Icons.person, color: Colors.black),
-                  Controller: passwordController,
-                  Validator: (val)=>Validator.confirmPasswordValidator(val, passwordController),
-                ),  Align(
-                  alignment: Alignment.topLeft,
-                  child: Custom.customText(
-                    text: "Phone Number",
-                    FontSize: 10,
-                    color: Colors.black,
-                    FontWeight: FontWeight.bold,
-                  ),
-                ),
-                Custom.customTextField(
-                  HintText: "Enter Phone Number",
-                  PreFixIcon: Icon(Icons.person, color: Colors.black),
-                  Controller: phoneController,
-                  Validator: Validator.phoneValidator,
-                ),
+                  SizedBox(height: 10),
         
-                SizedBox(height: 30),
-                RoundButton(
-                  title: "S I G N  U P",
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Signup2()),
-                    );
-                  },
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ],
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Custom.customText(
+                      text: "Email",
+                      FontSize: 10,
+                      color: Colors.black,
+                      FontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Custom.customTextField(
+                    HintText: "Enter Email",
+                    PreFixIcon: Icon(Icons.person, color: Colors.black),
+                    Controller: mailController,
+                    Validator: Validator.emailValidator,
+                  ),
+        
+                  SizedBox(height: 10),
+        
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Custom.customText(
+                      text: "Password",
+                      FontSize: 10,
+                      color: Colors.black,
+                      FontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Custom.customTextField(
+                    HintText: "Enter Password",
+                    PreFixIcon: Icon(Icons.person, color: Colors.black),
+                    Controller: passwordController,
+                    Validator: Validator.passwordlValidator,
+                  ),
+                  SizedBox(height: 10),
+        
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Custom.customText(
+                      text: "Password",
+                      FontSize: 10,
+                      color: Colors.black,
+                      FontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Custom.customTextField(
+                    HintText: "Confirm Password",
+                    PreFixIcon: Icon(Icons.person, color: Colors.black),
+                    Controller: passwordController,
+                    Validator: (val) => Validator.confirmPasswordValidator(
+                      val,
+                      passwordController,
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Custom.customText(
+                      text: "Phone Number",
+                      FontSize: 10,
+                      color: Colors.black,
+                      FontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Custom.customTextField(
+                    HintText: "Enter Phone Number",
+                    PreFixIcon: Icon(Icons.person, color: Colors.black),
+                    Controller: phoneController,
+                    Validator: Validator.phoneValidator,
+                  ),
+        
+                  SizedBox(height: 30),
+                  RoundButton(
+                    title: "S I G N  U P",
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Signup2()),
+                      );
+                    },
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ],
+              ),
             ),
           ),
         ),
