@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:provider/provider.dart';
+import '../../../../View-Model/role_provider.dart';
 import '../../../uiHelper/color_pallete.dart';
 import '../../../uiHelper/customs.dart';
 
@@ -45,8 +46,14 @@ final int currentStep;
 
   @override
   Widget build(BuildContext context) {
+    final selectedRole=context.read<RoleProvier>().selectedrole;
     return  Column(
       children: [
+        Align(
+          alignment: Alignment.topLeft,
+          child: Custom.customText(text: "Hello $selectedRole ", FontSize: 20, color: Colors.black, FontWeight: FontWeight.bold)
+          ,
+        ),
         Custom.customText(text: "Sign Up", FontSize: 30, color: Colors.black, FontWeight: FontWeight.bold),
         SizedBox(height: 30),
         Row(

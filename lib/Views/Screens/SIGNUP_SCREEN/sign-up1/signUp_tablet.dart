@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:fyp_tutor/Views/Screens/SIGNUP_SCREEN/sign-up1/signUp-steps.dart';
+import '../../../../View-Model/role_provider.dart';
 import '../../../../View-Model/signUp_viewModel.dart';
 import '../../../uiHelper/customs.dart';
 import '../../../uiHelper/mainButton.dart';
 import '../../../uiHelper/validators.dart';
 import '../signUp-2/signup-2.dart';
+import 'package:provider/provider.dart';
 
 
 class SignupTablet extends StatefulWidget {
@@ -37,6 +39,7 @@ class _SignupTabletState extends State<SignupTablet> {
 
   @override
   Widget build(BuildContext context) {
+    final selectedRole=context.read<RoleProvier>();
     return Scaffold(
       appBar: AppBar(
         title: Custom.customText(
@@ -45,8 +48,12 @@ class _SignupTabletState extends State<SignupTablet> {
           color: Colors.black,
           FontWeight: FontWeight.normal,
         ),
-        leading: Icon(Icons.arrow_back, color: Colors.black),
-      ),
+        leading:  IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(Icons.arrow_back, color: Colors.black),
+        ),      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(

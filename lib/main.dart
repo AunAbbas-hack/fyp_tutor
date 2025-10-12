@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:fyp_tutor/View-Model/role_provider.dart';
 import 'Views/Screens/splash-screen.dart';
 import 'firebase_options.dart';
 
@@ -14,7 +15,11 @@ void main() async{
 
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+  runApp(
+   ChangeNotifierProvider(create: (_)=>RoleProvier(),
+   child: const MyApp(),
+   )
+  );
 }
 
 class MyApp extends StatelessWidget {

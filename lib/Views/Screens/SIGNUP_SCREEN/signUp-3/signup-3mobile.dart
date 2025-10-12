@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fyp_tutor/Views/Screens/DashBoardScreen.dart';
+import 'package:fyp_tutor/Views/Screens/Dashboard/DashBoardScreen.dart';
 import 'package:fyp_tutor/Views/uiHelper/customs.dart';
 import 'package:fyp_tutor/Views/uiHelper/mainButton.dart';
 import 'package:fyp_tutor/Views/uiHelper/validators.dart';
